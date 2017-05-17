@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="11.71in" height="6.57383in"
+     viewBox="0 0 1124 631">
+    <style type="text/css" media="screen">
+        <![CDATA[
+            path {
+                fill: #f6f;
+                transition: fill 0.4s linear 0s;
+                opacity:0.5;
+            }
+            path:hover {
+                fill: red;
+                cursor:pointer;
+            }
+        ]]>        
+    </style>
+  <path id="Selection" class="has-hover"
+        fill="none" stroke="black" stroke-width="1"
+        d="M 246.83,78.00
+           C 246.83,78.00 230.58,60.00 230.58,60.00
+             229.13,58.33 224.47,53.51 223.74,52.00
+             223.04,50.54 222.97,49.62 223.74,48.17
+             225.20,45.44 236.91,36.85 240.00,36.85
+             242.71,36.85 245.89,39.56 248.00,41.13
+             248.00,41.13 262.00,51.63 262.00,51.63
+             262.00,51.63 320.00,95.00 320.00,95.00
+             317.95,101.00 312.26,106.25 308.05,111.00
+             303.23,116.43 297.71,123.82 292.00,128.00
+             292.00,128.00 246.83,78.00 246.83,78.00 Z" />
+</svg>

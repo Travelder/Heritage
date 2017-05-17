@@ -1,0 +1,72 @@
+<!doctype>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		body {
+			margin:0;
+		}
+		img,svg {
+			position: absolute;
+			width:100%;
+		}
+		img {
+			z-index:-1;
+		}
+		svg {
+			z-index: 1;
+		}
+		path {
+			fill: #871539;
+			opacity: 1;
+			transition: opacity linear 0.2s 0.1s;
+		}
+		path:hover {
+			fill: #871539;
+			opacity:0.7;
+			stroke: #871539;
+		}
+	</style>
+</head>
+<body>
+	<img src="map.PNG">
+	<!-- <object data="path.svg" type="image/svg+xml"></object> -->
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124 631">
+	   	<path id="Selection" class="has-hover" title="Ridge Property 1"
+	   		data-toggle="popover" data-trigger="hover" data-content="ANy other text describing this property"
+	  		d="M 246.83,78.00
+	           C 246.83,78.00 230.58,60.00 230.58,60.00
+	             229.13,58.33 224.47,53.51 223.74,52.00
+	             223.04,50.54 222.97,49.62 223.74,48.17
+	             225.20,45.44 236.91,36.85 240.00,36.85
+	             242.71,36.85 245.89,39.56 248.00,41.13
+	             248.00,41.13 262.00,51.63 262.00,51.63
+	             262.00,51.63 320.00,95.00 320.00,95.00
+	             317.95,101.00 312.26,106.25 308.05,111.00
+	             303.23,116.43 297.71,123.82 292.00,128.00
+	             292.00,128.00 246.83,78.00 246.83,78.00 Z" />
+	</svg>
+</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+ 	<script>
+ 	// $('path.has-hover', '.has-hover').hover(function(){
+ 		$('[data-toggle=popover]').popover({
+ 			'container': 'body'
+ 		});
+ 	// $('path.has-hover').hover(function(){
+ 	// 	$tooltip = $('.tooltip');
+ 	// 	$color = '#fff';
+ 	// 	if(this.hasAttribute('data-ridge')){
+ 	// 		$color = '#871539';
+ 	// 	}
+ 	// 	// else {
+
+ 	// 	// }
+ 	// 	$tooltip.find('.tooltip-header').css({'background-color':$color})
+ 	// 	// $tooltip.show();
+ 	// })
+	</script>
+</html>
