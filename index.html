@@ -846,6 +846,9 @@
  			$grade = $path.data('grade');
  			$popover.find('.popover-content .grade').html(grade[$grade]);
  			$price = $path.data('price');
+ 			if($price == -1) {
+ 				$price = 'SPEC'
+ 			}
  			if($price == 0 || !$price) {
  				$price = 'SOLD!!!'
  			}
