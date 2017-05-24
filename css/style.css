@@ -22,15 +22,15 @@ path {
 }
 path.ridgeProperty {
 	fill: #871539;
-	stroke: burlywood;
+	stroke: #a68c66;
 }
 path.parkProperty {
-	fill: burlywood;
+	fill: #a68c66;
 	stroke: #871539;
 }
 path.ridgeProperty:hover {
 	fill: rgba(113, 21, 57, 0.7);
-	stroke: burlywood;
+	stroke: #a68c66;
 	stroke-width:1px;
 }
 path.parkProperty:hover {
@@ -43,7 +43,7 @@ path.parkProperty:hover {
 	overflow:hidden;
 }
 .popover.ridgeProperty{
-	border-color:burlywood;
+	border-color:#a68c66;
 }
 .popover.parkProperty{
 	border-color:#871539;
@@ -67,7 +67,7 @@ path.parkProperty:hover {
 .popover.parkProperty .popover-footer,
 .popover.parkProperty .popover-title{
 	color:#871539;
-	background-color: burlywood;
+	background-color: #a68c66;
 }
 .address {
 	font-weight:700;
@@ -76,7 +76,7 @@ path.parkProperty:hover {
 	color:#871539;
 }
 .parkProperty .address{
-	color:burlywood;
+	color:#a68c66;
 }
 hr {
 	margin: 10px auto;
@@ -86,7 +86,7 @@ hr {
 	border-color: #871539;
 }
 .parkProperty hr {
-	border-color: burlywood;
+	border-color: #a68c66;
 }
 dt, dd {
 	display:inline-block;
@@ -110,7 +110,7 @@ dt:after {
 	color:#871539;
 }
 .parkProperty dd {
-	color: burlywood;
+	color: #a68c66;
 }
 .top_border{
 	border-top: 1px solid rgba(49, 49, 49, 0.5);
