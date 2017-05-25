@@ -3,6 +3,8 @@
 }
 body {
 	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
 }
 img,svg {
 	position: absolute;
@@ -34,7 +36,7 @@ path.ridgeProperty:hover {
 	stroke-width:1px;
 }
 path.parkProperty:hover {
-	fill: rgba(113, 21, 57, 0.7);
+	fill: rgba(166, 140, 102, 0.7);
 	stroke: #871539;
 	stroke-width:1px;
 }
