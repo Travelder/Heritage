@@ -98,6 +98,7 @@ dt {
 	font-weight: 700;
 	width:50px;
 	margin-left:10px;
+	vertical-align:top;
 }
 dd {
 	min-width:50px;

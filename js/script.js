@@ -47,6 +47,15 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	}
 	$popover.find('.popover-footer').html($price);
 	if($popover.hasClass('left')){
-		$popover.css('left',$popover.css('left').substr(0, $popover.css('left').length-2) - 80)
+		$left = $path[0].getBoundingClientRect()['left'];
+		$width = $popover.width();
+		$val = $left - $width - 10;
+		if ($val < 15) {
+			$popover.css('width', $width + ($val)) 
+			$val = 15;
+
+		}
+		console.log($val)
+		$popover.css('left', $val)
 	}
 });
