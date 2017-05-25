@@ -21,7 +21,7 @@ $('[data-toggle=popover].parkProperty').popover({
 $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	$path = $(this);
 	$popover = $('.popover');
-	$content_template = '<div class="address"><span class="inline-block">Lot # <span class="address_lot"></span>,<br> <span class="inline-block">Block # <span class="address_block"></span>, <span class="inline-block address_street"></span></div><hr><div><dt>Front</dt><dd class="front">108</dd></div><div><dt>Rear</dt><dd class="rear">108</dd></div><div><dt>Left</dt><dd class="left">108</dd></div><div><dt>Right</dt><dd class="right">108</dd></div><div class="top_border"><dt>Sqft</dt><dd class="sqft">108</dd></div><div class="top_border"><dt>Grade</dt><dd class="grade">Walk Out</dd></div>';
+	$content_template = '<div class="address"><span class="inline-block">Lot # <span class="address_lot"></span>,<br> <span class="inline-block">Block # <span class="address_block"></span>, <span class="inline-block address_street"></span></div><hr><div><dt>Front</dt><dd class="front">108</dd></div><div><dt>Rear</dt><dd class="rear">108</dd></div><div><dt>Left</dt><dd class="left">108</dd></div><div><dt>Right</dt><dd class="right">108</dd></div><div class="top_border"><dt>Sqft</dt><dd class="sqft">108</dd></div><div class="top_border"><dt>Grade</dt><dd class="grade">Walk Out</dd></div><div class="extras"><dt>Type</dt><dd class="type"></dd></div>';
 	$popover.find('.popover-content').html($content_template);
 	
 	$popover.find('.popover-content .address_lot').html($path.data('lot'));
@@ -32,6 +32,7 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	$popover.find('.popover-content .left').html($path.data('left'));
 	$popover.find('.popover-content .right').html($path.data('right'));
 	$popover.find('.popover-content .sqft').html($path.data('sqft'));
+	$popover.find('.popover-content .type').html($path.data('type'));
 	$grade = $path.data('grade');
 	$popover.find('.popover-content .grade').html(grade[$grade]);
 	$price = $path.data('price');

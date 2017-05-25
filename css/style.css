@@ -122,3 +122,6 @@ dt:after {
 .inline-block {
 	display:inline-block;
 }
+.ridgeProperty .extras {
+	display:none;
+}
