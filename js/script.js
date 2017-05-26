@@ -18,10 +18,25 @@ $('[data-toggle=popover].parkProperty').popover({
 	'animation': false,
 	'template': '<div class="popover parkProperty" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div><h3 class="popover-footer"> HHHH</h3></div>'
 });
+$('[data-toggle=popover].greenery').popover({
+	'container': 'body',
+	'html': true,
+	'animation': false,
+	'template': '<div class="popover greenery" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div><h3 class="popover-footer"> HHHH</h3></div>'
+});
 $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	$path = $(this);
 	$popover = $('.popover');
-	$content_template = '<div class="address"><span class="inline-block">Lot # <span class="address_lot"></span>,<br> <span class="inline-block">Block # <span class="address_block"></span>, <span class="inline-block address_street"></span></div><hr><div><dt>Front</dt><dd class="front">108</dd></div><div><dt>Rear</dt><dd class="rear">108</dd></div><div><dt>Left</dt><dd class="left">108</dd></div><div><dt>Right</dt><dd class="right">108</dd></div><div class="top_border"><dt>Sqft</dt><dd class="sqft">108</dd></div><div class="top_border"><dt>Grade</dt><dd class="grade">Walk Out</dd></div><div class="extras"><dt>Type</dt><dd class="type"></dd></div>';
+	$content_template = '<div class="address"><span class="inline-block">Lot # <span class="address_lot"></span>,<br> <span class="inline-block">Block # <span class="address_block"></span>, <span class="inline-block address_street"></span></div>\
+						<hr>\
+						<div class="block"><dt>Front</dt><dd class="front">108</dd></div>\
+						<div class="block"><dt>Rear</dt><dd class="rear">108</dd></div>\
+						<div class="block"><dt>Left</dt><dd class="left">108</dd></div>\
+						<div class="block"><dt>Right</dt><dd class="right">108</dd></div>\
+						<div class="block top_border"><dt>Sqft</dt><dd class="sqft">108</dd></div>\
+						<div class="block top_border"><dt>Grade</dt><dd class="grade">Walk Out</dd></div>\
+						<div class="block extras"><dt>Type</dt><dd class="type"></dd></div>\
+						<div class="static-label">Green Space</div>';
 	$popover.find('.popover-content').html($content_template);
 	
 	$popover.find('.popover-content .address_lot').html($path.data('lot'));
@@ -37,10 +52,12 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	$popover.find('.popover-content .grade').html(grade[$grade]);
 	$price = $path.data('price');
 	if($price == "-1") {
-		$price = 'SPEC'
+		$price = 'SPEC';
+		$popover.addClass('spec');
 	}
 	else if($price == 0 || !$price) {
-		$price = 'SOLD!!!'
+		$price = 'SOLD!!!';
+		$popover.addClass('sold');
 	}
 	else {
 		$price = '$' + $price
@@ -57,5 +74,8 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 		}
 		console.log($val)
 		$popover.css('left', $val)
+	}
+	if($path.hasClass('greenery')) {
+		$popover.find('')
 	}
 });

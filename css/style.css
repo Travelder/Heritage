@@ -22,33 +22,57 @@ path {
 	transition: opacity linear 0.2s 0.1s;
 	stroke-width:1px;
 }
-path.ridgeProperty {
+path {
 	fill: #871539;
 	stroke: #a68c66;
 }
-path.parkProperty {
+path[data-price='-1'] {
 	fill: #a68c66;
 	stroke: #871539;
 }
-path.ridgeProperty:hover {
+path[data-price='0'] {
+	fill: #777;
+	stroke: #871539;
+}
+path.greenery {
+	fill: green;	
+	stroke: darkgreen;
+}
+path:hover {
 	fill: rgba(113, 21, 57, 0.7);
 	stroke: #a68c66;
 	stroke-width:1px;
 }
-path.parkProperty:hover {
+path[data-price='-1']:hover {
 	fill: rgba(166, 140, 102, 0.7);
 	stroke: #871539;
+	stroke-width:1px;
+}
+path[data-price='0']:hover {
+	fill: rgba(7,7,7, 0.7);
+	stroke: #871539;
+	stroke-width:1px;
+}
+path.greenery:hover {
+	fill: rgba(0,255,0,0.7);	
+	stroke: darkgreen;
 	stroke-width:1px;
 }
 .popover {
 	padding:0;
 	overflow:hidden;
 }
-.popover.ridgeProperty{
+.popover{
 	border-color:#a68c66;
 }
-.popover.parkProperty{
+.popover.spec{
 	border-color:#871539;
+}
+.popover.sold{
+	border-color:#871539;
+}
+.popover.greenery{
+	border-color:darkgreen;
 }
 .popover .arrow{
 	display:none;
@@ -60,35 +84,56 @@ path.parkProperty:hover {
 	padding: 8px 14px;
 	font-size:14px;
 	border:none;
-}
-.popover.ridgeProperty .popover-footer,
-.popover.ridgeProperty .popover-title{
 	color:#f7f7f7;
 	background-color: #871539;
 }
-.popover.parkProperty .popover-footer,
-.popover.parkProperty .popover-title{
+.popover.spec .popover-footer,
+.popover.spec .popover-title{
 	color:#f7f7f7;
 	background-color: #a68c66;
 }
+.popover.sold .popover-footer,
+.popover.sold .popover-title{
+	color:#f7f7f7;
+	background-color: #777;
+}
+.popover.greenery .popover-footer,
+.popover.greenery .popover-title{
+	color:#f7f7f7;
+	background-color: green;
+}
+.popover.greenery .popover-footer {
+	display:none;
+}
+.popover.greenery .block {
+	display:none;
+}
 .address {
 	font-weight:700;
-}
-.ridgeProperty .address{
 	color:#871539;
 }
-.parkProperty .address{
+.spec .address{
 	color:#a68c66;
+}
+.sold .address{
+	color:#777;
+}
+.greenery .address{
+	color: green;
 }
 hr {
 	margin: 10px auto;
 	opacity:0.4;
-}
-.ridgeProperty hr {
 	border-color: #871539;
 }
-.parkProperty hr {
+.spec hr {
 	border-color: #a68c66;
+}
+.sold hr {
+	border-color: #a68c66;
+}
+.greenery hr {
+	border-color: green;
 }
 dt, dd {
 	display:inline-block;
@@ -104,15 +149,17 @@ dd {
 	min-width:50px;
 	margin-left:15px;
 	text-align: right;
+	color:#871539;
 }
 dt:after {
 	content:" :";
 	float:right;
 }
-.ridgeProperty dd {
-	color:#871539;
+.spec dd {
+	color: #a68c66;
 }
-.parkProperty dd {
+
+.sold dd {
 	color: #a68c66;
 }
 .top_border{
@@ -125,4 +172,13 @@ dt:after {
 }
 .ridgeProperty .extras {
 	display:none;
+}
+.static-label {
+	display: none;
+}
+.greenery .static-label {
+	display: block;
+	text-align:center;
+	font-weight:bold;
+	color:darkgreen;
 }
