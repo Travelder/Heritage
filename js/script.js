@@ -79,3 +79,17 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 		$popover.find('')
 	}
 });
+$('path.otherside').hover(function(){
+	$('.otherside').addClass('is_active')
+});
+$('path.otherside').mouseout(function(){
+	$('.otherside').removeClass('is_active')
+});
+$('path.otherside').click(function(){
+	if($('body').hasClass('parkMap')){
+		location.href = 'http://heritagedevelopment.com/heritage-ridge/'
+	}
+	else {
+		location.href = 'http://heritagedevelopment.com/heritage-park/'
+	}
+})

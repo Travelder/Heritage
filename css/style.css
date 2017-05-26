@@ -21,8 +21,6 @@ path {
 	opacity: 1;
 	transition: opacity linear 0.2s 0.1s;
 	stroke-width:1px;
-}
-path {
 	fill: #871539;
 	stroke: #a68c66;
 }
@@ -181,4 +179,14 @@ dt:after {
 	text-align:center;
 	font-weight:bold;
 	color:darkgreen;
+}
+path.otherside {
+	fill:#f8f8f8;
+	stroke: #616161;
+	cursor:pointer;
+}
+path.otherside.is_active {
+	fill: rgba(220, 220, 220, 1);
+	stroke: #a68c66;
+	stroke-width:1px;
 }
