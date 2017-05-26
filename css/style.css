@@ -64,6 +64,7 @@ path.greenery:hover {
 }
 .popover{
 	border-color:#a68c66;
+	min-width:200px;
 }
 .popover.spec{
 	border-color:#871539;
