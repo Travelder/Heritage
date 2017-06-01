@@ -190,3 +190,6 @@ path.otherside.is_active {
 	stroke: #a68c66;
 	stroke-width:1px;
 }
+.no-address .address, .no-address .address + hr {
+	display:none;
+}
