@@ -17,6 +17,9 @@ svg {
 	z-index: 1;
 	margin-left:0.35%;
 }
+.reserveMap svg{
+	margin-left:0;
+}
 path {
 	opacity: 1;
 	transition: opacity linear 0.2s 0.1s;

@@ -18,6 +18,12 @@ $('[data-toggle=popover].parkProperty').popover({
 	'animation': false,
 	'template': '<div class="popover parkProperty" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div><h3 class="popover-footer"> HHHH</h3></div>'
 });
+$('[data-toggle=popover].reserveProperty').popover({
+	'container': 'body',
+	'html': true,
+	'animation': false,
+	'template': '<div class="popover reserveProperty" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div><h3 class="popover-footer"> HHHH</h3></div>'
+});
 $('[data-toggle=popover].greenery').popover({
 	'container': 'body',
 	'html': true,
