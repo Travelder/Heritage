@@ -40,6 +40,7 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 						<div class="block"><dt>Left</dt><dd class="left">108</dd></div>\
 						<div class="block"><dt>Right</dt><dd class="right">108</dd></div>\
 						<div class="block top_border"><dt>Sqft</dt><dd class="sqft">108</dd></div>\
+						<div class="block top_border"><dt>Acre</dt><dd class="acre">108</dd></div>\
 						<div class="block top_border"><dt>Grade</dt><dd class="grade">Walk Out</dd></div>\
 						<div class="block extras"><dt>Type</dt><dd class="type"></dd></div>\
 						<div class="static-label">Green Space</div>';
@@ -52,10 +53,23 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	$popover.find('.popover-content .rear').html($path.data('rear'));
 	$popover.find('.popover-content .left').html($path.data('left'));
 	$popover.find('.popover-content .right').html($path.data('right'));
-	$popover.find('.popover-content .sqft').html($path.data('sqft'));
-	$popover.find('.popover-content .type').html($path.data('type'));
+	if($path.data('sqft'))
+		$popover.find('.popover-content .sqft').html($path.data('sqft'));
+	else
+		$popover.find('.popover-content .sqft').parent().addClass('hidden');
+	if($path.data('acre'))
+		$popover.find('.popover-content .acre').html($path.data('acre'));
+	else
+		$popover.find('.popover-content .acre').parent().addClass('hidden');
+	if($path.data('type'))
+		$popover.find('.popover-content .type').html($path.data('type'));
+	else
+		$popover.find('.popover-content .type').parent().addClass('hidden');
 	$grade = $path.data('grade');
-	$popover.find('.popover-content .grade').html(grade[$grade]);
+	if($grade)
+		$popover.find('.popover-content .grade').html(grade[$grade]);
+	else
+		$popover.find('.popover-content .grade').parent().addClass('hidden');
 	$price = $path.data('price');
 	if($price == "-1") {
 		$price = 'SPEC';
@@ -87,6 +101,18 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 	}
 	if($path.hasClass('no-address')) {
 		$popover.addClass('no-address');
+	}
+	if($path.hasClass('b1')){
+		$popover.addClass('b1');
+	}
+	if($path.hasClass('b2')){
+		$popover.addClass('b2');
+	}
+	if($path.hasClass('b3')){
+		$popover.addClass('b3');
+	}
+	if($path.hasClass('b4')){
+		$popover.addClass('b4');
 	}
 });
 $('path.otherside').hover(function(){

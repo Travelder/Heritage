@@ -27,6 +27,18 @@ path {
 	fill: #871539;
 	stroke: #a68c66;
 }
+path.b1{
+	fill:#ffff00
+}
+path.b2{
+	fill:#ffc000
+}
+path.b3{
+	fill:#ffc000
+}
+path.b4{
+	fill:#ffc000
+}
 path[data-price='-1'] {
 	fill: #a68c66;
 	stroke: #871539;
@@ -43,6 +55,18 @@ path:hover {
 	fill: rgba(113, 21, 57, 0.7);
 	stroke: #a68c66;
 	stroke-width:1px;
+}
+path.b1:hover{
+	fill: rgba(255, 255, 0, 0.7);
+}
+path.b2:hover{
+	fill: rgba(255, 192, 0, 0.7);
+}
+path.b3:hover{
+	fill: rgba(255, 192, 0, 0.7);
+}
+path.b4:hover{
+	fill: rgba(255, 192, 0, 0.7);
 }
 path[data-price='-1']:hover {
 	fill: rgba(166, 140, 102, 0.7);
@@ -88,6 +112,26 @@ path.greenery:hover {
 	color:#f7f7f7;
 	background-color: #871539;
 }
+.popover.b1 .popover-footer,
+.popover.b1 .popover-title{
+	color:#f7f7f7;
+	background-color: #ffff00;
+}
+.popover.b2 .popover-footer,
+.popover.b2 .popover-title{
+	color:#f7f7f7;
+	background-color: #ffc000;
+}
+.popover.b3 .popover-footer,
+.popover.b3 .popover-title{
+	color:#f7f7f7;
+	background-color: #ffc000;
+}
+.popover.b4 .popover-footer,
+.popover.b4 .popover-title{
+	color:#f7f7f7;
+	background-color: #ffc000;
+}
 .popover.spec .popover-footer,
 .popover.spec .popover-title{
 	color:#f7f7f7;
@@ -112,6 +156,18 @@ path.greenery:hover {
 .address {
 	font-weight:700;
 	color:#871539;
+}
+.b1 .address {
+	color: #ffff00;
+}
+.b2 .address {
+	color: #ffc000;
+}
+.b3 .address {
+	color: #ffc000;
+}
+.b4 .address {
+	color: #ffc000;
 }
 .spec .address{
 	color:#a68c66;
