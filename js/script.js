@@ -96,8 +96,12 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 		$popover.css('left', $val)
 	}
 	if($path.hasClass('greenery')) {
-		$popover.find('.static-label').html($popover.find('.popover-title').text());
-		$popover.find('.popover-title').html('Green Space');
+		if($path.hasClass('retain-title')){
+			$popover.find('.static-label').html('');
+		} else {
+			$popover.find('.static-label').html($popover.find('.popover-title').text());
+			$popover.find('.popover-title').html('Green Space');
+		}
 	}
 	if($path.hasClass('no-address')) {
 		$popover.addClass('no-address');
