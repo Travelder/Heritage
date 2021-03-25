@@ -99,7 +99,7 @@ $('[data-toggle=popover]').on('shown.bs.popover', function(){
 		if($path.hasClass('retain-title')){
 			$popover.find('.static-label').html('');
 		} else {
-			$popover.find('.static-label').html($popover.find('.popover-title').text());
+			$popover.find('.static-label').html($popover.find('.popover-title').html());
 			$popover.find('.popover-title').html('Green Space');
 		}
 	}
